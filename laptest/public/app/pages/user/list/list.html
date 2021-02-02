@@ -1,0 +1,35 @@
+<div class="widgets">
+	<div class="row">
+		<div class="col-md-12">
+			<div ba-panel ba-panel-title="Editable Cells" ba-panel-class="with-scroll">
+				<div class="horizontal-scroll">
+					<table class="table table-hover" st-table="vm.users">
+						<thead>
+							<tr class="sortable">
+								<th class="table-id" st-sort="id" st-sort-default="true">#</th>
+								<th st-sort="firstName">First Name</th>
+								<th st-sort="lastName">Last Name</th>
+								<th st-sort="username">Username</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-ng-repeat="item in vm.users" class="editable-tr-wrap">
+								<td class="table-id">{{item.id}}</td>
+								<td><span editable-text="item.firstname" blur="cancel">{{item.firstname}}</span></td>
+								<td><span editable-text="item.lastname" blur="cancel">{{item.lastname}}</span></td>
+								<td><span editable-text="item.username" blur="cancel">{{item.username}}</span></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="6" class="text-center">
+									<div st-pagination="" st-items-by-page="12" st-displayed-pages="5"></div>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

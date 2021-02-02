@@ -1,0 +1,34 @@
+select level.id, level.title, task.title as tasktitle from level 
+left join level_task on level.id = level_task.level_id 
+left join task on task.id = level_task.task_id
+
+
+
+select  id
+from (select * from level
+         order by parentid, id) products_sorted,
+        (select @pv := '4') initialisation
+where find_in_set(parentid, @pv) > 0
+and @pv := concat(@pv, ',', id)
+
+
+select task.id
+from task, level_task
+where task.id = level_task.level_id
+   and level_task.level_id in (select id
+			from (select * from level) levels_sorted,
+			(select @pv := ?) initialisation
+				where find_in_set(parentid, @pv) > 0
+				and @pv := concat(@pv, ',', id))
+
+
+all leaf
+select task.id from task, level_task, level where task.id = level_task.task_id and level.id = level_task.task_id and level.parentid = 4
+
+
+
+select id from level where id in (select id
+			from (select * from level) levels_sorted,
+			(select @pv :=3) initialisation
+				where find_in_set(parentid, @pv) > 0
+				and @pv := concat(@pv, ',', id))

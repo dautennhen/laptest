@@ -1,0 +1,63 @@
+<div class="row">
+	<div class="col-md-6">
+		<div ba-panel ba-panel-title="User Form" ba-panel-class="with-scroll">
+			<form name="userForm">
+				<div class="form-group">
+					<label for="username">User Name</label>
+					<input type="text" ng-model="vm.user.username" class="form-control" placeholder="User Name" name="username" ng-minlength="5"
+						ng-maxlength="20" required>
+					<div ng-show="userForm.username.$dirty" ng-messages="userForm.username.$error" role="alert">
+						<div ng-message-exp="'required'">You did not enter your username</div>
+						<div ng-message-exp="['minlength', 'maxlength']">
+							Your username must be between 5 and 20 characters long
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" ng-model="vm.user.password" strong-secret required class="form-control" name="password" placeholder="Password">
+					<div ng-show="userForm.password.$dirty" ng-messages="userForm.password.$error" role="alert">
+						<div ng-message-exp="'required'">You did not enter your password</div>
+						<div ng-message="numberValidator">Strong secret has to contain at least 1 number</div>
+						<div ng-message="uppercaseValidator">Strong secret has to contain at least 1 uppercase</div>
+						<div ng-message="sixCharactersValidator">Strong secret has to exactly 6 characters long</div>
+					</div>
+				</div>
+				<!--<div class="form-group">
+					<label for="exampleInputPassword1">Confirm Password</label>
+					<input ng-model="vm.user.confirmPass" type="password" class="form-control" placeholder="Confirm Password">
+				</div>-->
+				<div class="form-group">
+					<label for="exampleInputEmail1">Number Phone</label>
+					<input ng-model="vm.user.numberPhone" class="input-phone form-control" type='text' phone-input ng-model="phoneVal" placeholder="Number Phone"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="firstname">First Name</label>
+					<input type="text" ng-model="vm.user.firstname" class="form-control" placeholder="First Name" name="firstname" ng-minlength="2"
+						ng-maxlength="20" required>
+					<div ng-show="userForm.firstname.$dirty" ng-messages="userForm.firstname.$error" role="alert">
+						<div ng-message-exp="'required'">You did not enter your firstname</div>
+						<div ng-message-exp="['minlength', 'maxlength']">
+							Your firstname must be between 5 and 20 characters long
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="lastname">Last Name</label>
+					<input type="text" ng-model="vm.user.lastname" class="form-control" placeholder="Last Name" name="lastname" ng-minlength="2"
+						ng-maxlength="20" required>
+					<div ng-show="userForm.lastname.$dirty" ng-messages="userForm.lastname.$error" role="alert">
+						<div ng-message-exp="'required'">You did not enter your lastname</div>
+						<div ng-message-exp="['minlength', 'maxlength']">
+							Your lastname must be between 5 and 20 characters long
+						</div>
+					</div>
+				</div>
+
+				<button class="btn btn-success" ng-click="createUser(vm.user)">Create</button>
+				<button class="btn btn-danger" ng-click="cancelUser()">Cancel</button>
+			</form>
+		</div>
+	</div>
+</div>
