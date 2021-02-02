@@ -1,0 +1,481 @@
+.admin-poolowner {}
+.no_display {
+    display: none !important;
+}
+
+.inputerror {
+    border: 1px solid red !important;
+}
+
+[contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    display: block;
+}
+
+.tab-content {
+    padding-top: 20px
+}
+
+[data-orderfield] {
+    cursor: pointer;
+    &:after {
+        margin-left: 5px;
+        font-family: FontAwesome;
+    }
+}
+
+[data-orderfield].asc {
+    &:after {
+        content: "\f0d8";
+    }
+}
+
+[data-orderfield].desc {
+    &:after {
+        content: "\f0d7";
+    }
+}
+
+.dashboard {
+    .icon:hover {
+        color: $brand-success
+    }
+    .search-fieldset {
+        input.form-control, select.form-control {
+           width: auto;
+           display: inline-block
+        }
+        span.btn {
+            position: relative;
+            top: -2px;
+        }
+        span.clear-filter {
+            text-decoration: line-through;
+        }
+    }
+}
+    
+.dashboard-panel {
+    .panel-primary > .panel-heading {
+        padding: 10px 15px 0px;
+        background-color: none;
+        .nav-tabs > li > a {
+            border: 1px solid gray;
+            border-bottom: none;
+            color: black;
+        }
+    }
+    .tab-content {
+        padding: 30px;
+    }
+}
+
+.panel {
+    .icon.badge {
+        padding: 0px;
+        background: none;
+        color: #336699;
+        font-size: 120%;
+        margin-left: 5px;
+        &:empty {
+            display: inline-block;
+        }
+    }
+}
+
+.poolowner_profile {
+    .fieldset {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        .labeltext {
+            top: 7px;
+            position: relative;
+        }
+        .contenteditable.active {
+            border: 1px solid lightgray;
+        }
+        .contenteditable.auto {
+            display: inline;
+        }
+        .contenteditable.auto.active {
+            min-width: 64px;
+            display: inline-block;
+        }
+        .contenteditable.password {
+            -webkit-text-security: disc;
+        }
+        .contenteditable {
+            min-width: 200px;
+            display: inline-block;
+            padding: 7px;
+            border-radius: 5px;
+            outline: none;
+        }
+        select.contenteditable {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: none;
+            min-width: auto;
+        }
+        .img_profile {
+            width: 100px;
+            height: auto
+        }
+    }
+    .form_upload {
+        display: inline-block;
+    }
+    #form_upload {
+        width: 50%;
+        margin: auto;
+        button[type="submit"]{
+            background: none;
+            border: none;
+            font-size: 200%;
+        }
+    }
+    input[type="file"].avatar { 
+        width: 25px;
+        height: 37px;
+        outline: none;
+        display: inline;
+        &:before {
+            font-family: 'Glyphicons Halflings';
+            font-size: 200%;
+            content : "\e022";
+        }
+    }
+}
+
+.poolowner_poolinfo {
+    .checkbox {
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(1.2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        padding: 10px;
+        text-transform: uppercase;
+    }
+    .icon.saveform-fieldset {
+       margin-left: 100px 
+    }
+    
+    input[type="checkbox"] {
+        margin-left: -32px;
+        margin-top: -2px;
+    }
+}
+
+.technician-professionnal-service {
+    button {
+        font-size: 13px
+    }
+    table {
+        margin-top: 10px;
+        tr {
+            height: 45px;
+            &:even {
+                background-color: gray;
+            }
+            td {
+                position: relative;
+                vertical-align: middle;
+            }
+        }
+    }
+    .technician-img {
+        width: 100px;
+        height: auto;
+        min-height: 100px;
+    }
+    form.form_technician-avatar {
+        display: none
+    }
+    span.avatar {
+        padding-right: 36px;
+        padding-bottom: 36px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% auto;
+        border-radius: 18px;
+        border: 1px solid rgba(51, 122, 183, 0.2);
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        top: 3px;
+    }
+    .status {
+        padding-bottom: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        position: absolute;
+        top: 12px;
+        font-size: 20px;
+    }
+    .status.active {
+        color: green;
+    }
+    .status.pending {
+        color: gray;
+    }
+}
+
+.my-pool-service-company{
+    tr td {
+        vertical-align: middle !important;
+    }
+    a.btn.btn-primary {
+        margin: 5px;
+    }
+    button.btn.btn-default {
+        background: #d67676;
+    }
+    tr th{
+        border: 0px !important;
+    }
+    img.logo{
+        width: 100px;
+        height: 50px;
+    }
+}
+
+
+.company-profile-service {
+    /*  bhoechie tab */
+    div.profile-tab-container{
+        z-index: 10;
+        background-color: #ffffff;
+        padding: 0 !important;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        border:1px solid #ddd;
+        margin-top: 20px;
+        margin-left: 50px;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        background-clip: padding-box;
+        opacity: 0.97;
+        filter: alpha(opacity=97);
+    }
+    div.profile-tab-menu{
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    div.profile-tab-menu div.list-group{
+        margin-bottom: 0;
+    }
+    div.profile-tab-menu div.list-group>a{
+        margin-bottom: 0;
+    }
+    div.profile-tab-menu div.list-group>a .glyphicon,
+    div.profile-tab-menu div.list-group>a .fa {
+        color: #5A55A3;
+    }
+    div.bhoechie-tab-menu div.list-group>a:first-child{
+        border-top-right-radius: 0;
+        -moz-border-top-right-radius: 0;
+    }
+    div.profile-tab-menu div.list-group>a:last-child{
+        border-bottom-right-radius: 0;
+        -moz-border-bottom-right-radius: 0;
+    }
+    div.profile-tab-menu div.list-group>a.active,
+    div.profile-tab-menu div.list-group>a.active .glyphicon,
+    div.profile-tab-menu div.list-group>a.active .fa{
+        background-color: #5A55A3;
+        background-image: #5A55A3;
+        color: #ffffff;
+    }
+    div.profile-tab-menu div.list-group>a.active:after{
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin-top: -13px;
+        border-left: 0;
+        border-bottom: 13px solid transparent;
+        border-top: 13px solid transparent;
+        border-left: 10px solid #5A55A3;
+        }
+
+        div.profile-tab-content{
+        background-color: #ffffff;
+        /* border: 1px solid #eeeeee; */
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    div.profile-tab div.profile-tab-content:not(.active){
+        display: none;
+    }
+    .is-disabled {
+        pointer-events: none;   
+    }
+    .divLoadData {
+        display: none;
+        padding-top:10px;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .portrait {
+        height: 80px;
+        width: 30px;
+    }
+}
+
+.company-route-service {
+    /*  bhoechie tab */
+    div.route-tab-container{
+        z-index: 10;
+        background-color: #ffffff;
+        padding: 0 !important;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        border:1px solid #ddd;
+        margin-top: 10px;
+        margin-left: 0px;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        background-clip: padding-box;
+        opacity: 0.97;
+        filter: alpha(opacity=97);
+    }
+    div.route-tab-menu{
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    div.route-tab-menu div.list-group{
+        margin-bottom: 0;
+    }
+    div.route-tab-menu div.list-group>a{
+        margin-bottom: 0;
+    }
+    div.route-tab-menu div.list-group>a .glyphicon,
+    div.route-tab-menu div.list-group>a .fa {
+        color: #5A55A3;
+    }
+    div.route-tab-menu div.list-group>a:first-child{
+        border-top-right-radius: 0;
+        -moz-border-top-right-radius: 0;
+    }
+    div.route-tab-menu div.list-group>a:last-child{
+        border-bottom-right-radius: 0;
+        -moz-border-bottom-right-radius: 0;
+    }
+    div.route-tab-menu div.list-group>a.active,
+    div.route-tab-menu div.list-group>a.active .glyphicon,
+    div.route-tab-menu div.list-group>a.active .fa{
+        background-color: #5A55A3;
+        background-image: #5A55A3;
+        color: #ffffff;
+    }
+    div.route-tab-menu div.list-group>a.active:after{
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin-top: -13px;
+        border-left: 0;
+        border-bottom: 13px solid transparent;
+        border-top: 13px solid transparent;
+        border-left: 10px solid #5A55A3;
+        }
+
+        div.route-tab-content{
+        background-color: #ffffff;
+        /* border: 1px solid #eeeeee; */
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    div.route-tab div.route-tab-content:not(.active){
+        display: none;
+    }
+    .is-disabled {
+        pointer-events: none;   
+    }
+    .divLoadData {
+        display: none;
+        padding-top:10px;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .portrait {
+        height: 80px;
+        width: 30px;
+    }
+
+    //select with image 
+    h2 {
+      margin: 30px 0 0 0;
+    }
+    fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+    }
+ 
+    /* select with custom icons */
+    .ui-selectmenu-menu .ui-menu.customicons .ui-menu-item-wrapper {
+      padding: 0.5em 0 0.5em 3em;
+    }
+    .ui-selectmenu-menu .ui-menu.customicons .ui-menu-item .ui-icon {
+      height: 24px;
+      width: 24px;
+      top: 0.1em;
+    }
+    .ui-icon.video {
+      background: url("images/24-video-square.png") 0 0 no-repeat;
+    }
+    .ui-icon.podcast {
+      background: url("images/24-podcast-square.png") 0 0 no-repeat;
+    }
+    .ui-icon.rss {
+      background: url("images/24-rss-square.png") 0 0 no-repeat;
+    }
+ 
+    /* select with CSS avatar icons */
+    option.avatar {
+      background-repeat: no-repeat !important;
+      padding-left: 20px;
+    }
+    .avatar .ui-icon {
+      background-position: left top;
+    }
+
+    div.img-div{
+        height:200px;
+        width:200px;
+        overflow:hidden;
+        border-radius:50%;
+    }
+
+    .img-div img{
+        -webkit-transform:translate(-50%);
+        margin-left:100px;
+    }
+
+    .circle-image{
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        background-image:url("http://placekitten.com/g/200/400");
+        display:block;
+        background-position-y:25% 
+    }
+}

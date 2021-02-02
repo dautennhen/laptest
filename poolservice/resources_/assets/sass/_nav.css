@@ -1,0 +1,59 @@
+/*
+ * Custom styles
+ */
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-container {
+    padding: 10px 0 10px 0;
+}
+
+.navbar.navbar-fixed-top.fixed-theme {
+    background-color: #00d0ff;
+    border-color: #00d0ff;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+
+.navbar-brand.fixed-theme {
+    font-size: 18px;
+}
+
+.navbar-container.fixed-theme {
+    padding: 0;
+}
+
+.navbar-brand.fixed-theme,
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
+.navbar-fixed-top {
+    background-color: #00d0ff;
+}
+.navbar-toggle .icon-bar {
+    background: #1e12e2;
+}
+.navbar a {
+    color: white;
+}
+.text-color-deep {
+    color: #bc4e2f;
+}
+.text-color-water {
+    color: #2c9fda;
+}
+.navbar li.active a {
+    color: #0575f1;
+    background: transparent;
+}
+.navbar li, .navbar a{
+    background: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
